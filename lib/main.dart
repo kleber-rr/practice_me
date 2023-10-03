@@ -125,13 +125,18 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  double f(var a, var b, var c, var d) {
-    var e = 0.0172453292519943295;
-    var g = pow(10, 10);
-    var h = ((c - a) * e).abs();
-    var i = ((d - b) * e).abs();
-    var j = (1 - cos(h)) / 2 + cos(a * e) * cos(c * e) * (1 - cos(i)) / 2;
-    return (((asin(sqrt(j / g)) * 12742 * g).round()) / g);
+  /// Calcula a metragem cúbica de uma área tridimensional representada como uma matriz.
+  ///
+  /// [area] é uma matriz onde cada célula representa a altura em uma posição específica.
+  /// Retorna a metragem cúbica total, que é a soma de todas as alturas na matriz.
+  double calcularMetragemCubicaMatriz(List<List<double>> area) {
+    double metragemCubica = 0.0;
+    for (List<double> linha in area) {
+      for (double altura in linha) {
+        metragemCubica += altura;
+      }
+    }
+    return metragemCubica;
   }
 
 }

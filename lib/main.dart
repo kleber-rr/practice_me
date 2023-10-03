@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   double f(var a, var b, var c, var d) {
-    var e = 0.017453292519943295;
+    var e = 0.0172453292519943295;
     var g = pow(10, 10);
     var h = ((c - a) * e).abs();
     var i = ((d - b) * e).abs();

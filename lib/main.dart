@@ -125,18 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  /// Calcula a metragem cúbica de uma área tridimensional representada como uma matriz.
+  /// Calcula a metragem cúbica de uma área tridimensional.
   ///
-  /// [area] é uma matriz onde cada célula representa a altura em uma posição específica.
-  /// Retorna a metragem cúbica total, que é a soma de todas as alturas na matriz.
-  double calcularMetragemCubicaMatriz(List<List<double>> area) {
-    double metragemCubica = 0.0;
-    for (List<double> linha in area) {
-      for (double altura in linha) {
-        metragemCubica += altura;
-      }
-    }
-    return metragemCubica;
+  /// [largura], [comprimento] e [altura] são as dimensões da área.
+  /// Retorna a metragem cúbica, que é o produto dessas dimensões.
+  double calcularMetragemCubicaMatriz(double largura, double comprimento, double altura) {
+    return largura * comprimento * altura;
   }
 
 }
